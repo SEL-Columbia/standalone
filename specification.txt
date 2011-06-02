@@ -1,0 +1,72 @@
+Specification for Prepaid Meter in Low GSM Signal Areas
+-------------------------------------------------------
+
+This document lists the requirements for a small network
+of systems delivering power on a prepaid basis to customers.
+
+
+Assumptions:
+------------
+- Each box or enclosure should be able to handle a source of 10 kW.
+- Each box splits into 10 - 16 individually metered circuits
+- Each of these circuits serves a household
+- Operator oversees a network of 100 - 1000 boxes
+- No GSM/GPRS network
+- Operator physically visits each box at least once a week
+- Electricity purchased on a prepaid basis
+- Customers are able to directly interact with the system for
+  balance inquiry and credit addition
+
+
+
+Use cases:
+----------
+Customer Purchase:
+Customer approaches local scratch card vendor to purchase
+scratch card with code.  Customer enters code on keypad and
+display on a central kiosk.  Computer validates code, and
+adds credit to correct account.
+
+Customer Inquiry:
+Customer able to approach kiosk and inquire into remaining
+credit balance available.  Customer enters account number
+and sees remaining monetary value.  Customer can also see
+instantaneous power on request.
+
+Administrator Configuration:
+Operator is able to set maximum power and energy values
+per customer.
+
+Administrator Inquiry:
+Operator able to generate report from box with records of
+scratch card codes entered into system.
+
+
+
+
+Requirements for system:
+------------------------
+- Power and energy measurement of each individually metered circuit
+
+- Ability to shutoff each circuit when credit is exhausted
+
+- System is able to limit total consumption to prevent exceeding 
+  generation or storage capacity
+
+- System switches off consumer that has exceeded a maximum power 
+  threshold (Pmax)
+
+- System switches off consumer that has exceeded maximum energy 
+  allotment for the day (Emax)
+
+- Consumer interface for adding credit by entering scratch card codes
+
+- Persistent storage of credit and usage variables for times without power
+
+- Administrative interface that allows for downloading of power usage history
+
+- Administrative interface that allows for setting of Emax and Pmax
+
+- To prevent fraud, token cannot be used at more than one meter
+
+- Hourly storage of credit and power usage
